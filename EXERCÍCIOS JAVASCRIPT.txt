@@ -1,0 +1,136 @@
+
+- EXERCÍCIOS JAVASCRIPT 
+
+=============================================
+
+1 – Calcule a média de diversas notas digitadas pelo usuário.
+
+var nota1 = Number(window.prompt("Digite sua nota 1: "))
+var nota2 = Number(window.prompt("Digite sua nota 2: "))
+var nota3 = Number(window.prompt("Digite sua nota 3: "))
+var nota4 = Number(window.prompt("Digite sua nota 4: "))
+media = ((nota1+nota2+nota3+nota4)/4).toFixed(2)
+window.alert(`Sua média é ${media}`)
+
+=============================================
+
+2 – Faça um programa que entre com cinco números e imprima o quadrado de cada número.
+
+var n1 = Number(window.prompt("Digite um número: "))
+var n2 = Number(window.prompt("Digite outro número: "))
+var n3 = Number(window.prompt("Digite outro número: "))
+var n4 = Number(window.prompt("Digite outro número: "))
+var n5 = Number(window.prompt("Digite outro número: "))
+var ex1 = n1**2
+var ex2 = n2**2
+var ex3 = n3**2
+var ex4 = n4**2
+var ex5 = n5**2
+window.alert(`O quadrado de cada número é respectivamente ${ex1}, ${ex2}, ${ex3}, ${ex4} e ${ex5}.`)
+
+=============================================
+
+Exercícios de Teste Condicional IF ELSE em JavaScript
+
+1. Faça um script que verifique se uma letra digitada num campo de input é vogal ou consoante.
+
+<body>
+    <h1>Digite uma letra</h1>
+    <input type="text" name="letra" id="letra">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function checar() {
+            var letra = window.document.getElementById('letra')
+            var res = window.document.getElementById('res')
+            var le = String(letra.value)
+            
+            if (le == 'a' || le == 'e' || le == 'i' || le == 'o' || le == 'u') {
+                res.innerText = `A letra ${le.toUpperCase()} é uma VOGAL!`
+            } else {
+                res.innerText = `A letra ${le.toUpperCase()} é uma CONSOANTE!`
+            }
+        }
+    </script>
+</body>
+
+=============================================
+
+2. Faça um script que pede duas notas de um aluno. Em seguida ele deve calcular a média do aluno e dar o seguinte resultado:
+
+    A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+    A mensagem "Reprovado", se a média for menor do que sete;
+    A mensagem "Aprovado com Distinção", se a média for igual a dez.
+
+
+
+var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var n3 = Number(num3.value)
+            var n4 = Number(num4.value)
+
+=============================================
+
+<body>
+    <h1>BOLETIM</h1>
+    <h3>INSIRA SUAS NOTAS DE MATEMÁTICA</h3>
+    <p>
+        1° bimestre
+        <input type="number" name="n1" id="n1">
+        2° bimestre
+        <input type="number" name="n2" id="n2">
+    </p>
+    <p>
+        3° bimestre
+        <input type="number" name="n3" id="n3">
+        4° bimestre
+        <input type="number" name="n4" id="n4">        
+    </p>
+    <p>
+        <input type="button" value="Verificar" onclick="checar()">
+    </p>
+
+    <div id="res">
+
+    </div>    
+    <script>
+        function checar() {
+            var num1 = window.document.getElementById('n1')
+            var num2 = window.document.getElementById('n2')
+            var num3 = window.document.getElementById('n3')
+            var num4 = window.document.getElementById('n4')
+            var res = window.document.getElementById('res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var n3 = Number(num3.value)
+            var n4 = Number(num4.value)
+            média = (n1+n2+n3+n4)/4            
+            if (média >= 7 && média < 10) {
+                res.innerHTML = 'APROVADO!'
+            } else {
+                if (média < 7) {
+                    res.innerHTML = 'REPROVADO!'
+                } else {
+                    res.innerHTML = 'APROVADO COM DISTINÇÃO!'
+                }
+            }
+
+        }
+        
+    </script>
+</body>
+
+=============================================
+
+
+
+
+
+
+
+
+
+
